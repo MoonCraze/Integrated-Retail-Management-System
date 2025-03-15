@@ -11,5 +11,9 @@ Features:
 
 Built to seamlessly integrate with Mooncraze's decentralized token platform while providing robust retail capabilities for merchandise, token sales, and digital products.
 
+- UML Diagram
 ![image](https://github.com/user-attachments/assets/bac1c6fd-8ea0-47c2-9bc9-53794e976546)
+
+- Architecture Diagram
+![image](https://github.com/user-attachments/assets/a0eab7a3-c48e-46f3-a454-f12eedc12f84)
 
