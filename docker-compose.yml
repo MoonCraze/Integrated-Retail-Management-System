@@ -21,6 +21,7 @@ services:
     environment:
       PGADMIN_DEFAULT_EMAIL: ${PGADMIN_DEFAULT_EMAIL:-pgadmin@pgadmin.org}
       PGADMIN_DEFAULT_PASSWORD: ${PGADMIN_DEFAULT_PASSWORD:-admin}"
+      PGADMIN_CONFIG_SERVER_MODE: 'False'
     volumes:
       - pgadmin:/var/lib/pgadmin
     networks:
@@ -34,8 +35,8 @@ services:
     volumes:
       - mongo:/data
     environment:
-      - MONGO_INITDB_ROOT_USERNAMEpasan
-      - MONGO_INITDB_ROOT_PASSWORD=Pasan@123
+      - MONGO_INITDB_ROOT_USERNAME=pasan
+      - MONGO_INITDB_ROOT_PASSWORD=pasan
   mongo-express:
     container_name: ms_mongo_express
     image: mongo-express
@@ -43,7 +44,7 @@ services:
     ports:
       - 8081:8081
     environment:
-      ME_CONFIG_MONGODB_SERVER: mongodb
+      ME_CONFIG_MONGODB_SERVER: mongo  # Fixed the server name
       ME_CONFIG_MONGODB_ADMINUSERNAME: pasan
       ME_CONFIG_MONGODB_ADMINPASSWORD: Pasan@123
   mail-dev:
